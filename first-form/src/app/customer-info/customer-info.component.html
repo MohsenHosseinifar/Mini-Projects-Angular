@@ -1,0 +1,36 @@
+<h2>cusromer info</h2>
+<form [formGroup]="costumerForm" (submit)="save()">
+    <div>
+        <label for="">first name</label>
+        <input type="text" formControlName="firstname" >
+        <div *ngIf="costumerForm.get('firstname').dirty && costumerForm.get('firstname').invalid" class="text-error">
+            <span *ngIf="costumerForm.get('firstname').errors['required']">First name is required</span>
+        </div>
+    </div>
+    <div>
+        <label for="">last name</label>
+        <input type="text" formControlName="lastname">
+        <div *ngIf="costumerForm.get('lastname').dirty && costumerForm.get('lastname').invalid" class="text-error">
+            <span *ngIf="costumerForm.get('lastname').errors['maxlength']">last name is maxLength</span>
+            <span *ngIf="costumerForm.get('lastname').errors['minlength']">last name is minLength</span>
+        </div>
+    </div>
+    <div>
+        <label for="">customercode</label>
+        <input type="text" formControlName="customercode">
+        <div *ngIf="costumerForm.get('customercode').dirty && costumerForm.get('customercode').invalid" class="text-error">
+            <span *ngIf="costumerForm.get('customercode').errors['minlength']">customercode is minLength</span>
+            
+        </div>
+    </div>
+    <div>
+        <label for="">email</label>
+        <input type="text" formControlName="email" >
+        <div *ngIf="costumerForm.get('email').dirty && costumerForm.get('email').invalid" class="text-error">
+            <span *ngIf="costumerForm.get('email').errors['pattern']">email is no coamplet</span>
+            
+        </div>
+    </div>
+    <button type="submit" [disabled]="costumerForm.invalid"> submit</button>
+</form>
+<!-- "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" -->
