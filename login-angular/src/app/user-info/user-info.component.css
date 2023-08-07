@@ -1,0 +1,26 @@
+.user-info-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.user-info {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-username {
+  margin-left: 40px; /* تغییر اندازه مارجین به دلخواه */
+}

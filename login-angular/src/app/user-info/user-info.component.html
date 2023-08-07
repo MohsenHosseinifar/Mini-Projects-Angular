@@ -1,0 +1,28 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <!-- <h3>{{ enteredUsername }}</h3> -->
+
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+    <span>{{ enteredUsername }} وقت بخیر </span>
+    <!-- -->
+    <mat-button-toggle (change)="toggleDarkMode()" style="color: white;">
+        Dark Mode
+    </mat-button-toggle>
+    <!--  -->
+</mat-toolbar>
+<div class="user-info-container">
+    <h2>اطلاعات کاربر</h2>
+    <div class="user-info">
+        <p style="color: rgb(82, 174, 255);"><strong>نام کاربری:</strong> {{ enteredUsername }}</p>
+        <p style="color: rgb(82, 174, 255);"><strong>رمز عبور:</strong> {{ enteredPassword }}</p>
+    </div>
+</div>

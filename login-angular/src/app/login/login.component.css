@@ -1,0 +1,47 @@
+/* استایل دهی به فرم */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* استایل دهی به قسمت راست فرم */
+.login-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ccc;
+}
+
+/* استایل دهی به ورودی‌ها در قسمت راست فرم */
+.mat-form-field {
+  margin-bottom: 20px;
+}
+
+/* استایل دهی به قسمت چپ فرم (بدون محتوا در این مثال) */
+.login-left {
+  flex: 1;
+  background-color: #fff;
+}
+
+/* استایل دهی به ورودی رمز عبور */
+.example-full-width {
+  width: 100%;
+}
+
+/* استایل دهی به تعداد کاراکترهای ورودی رمز عبور */
+.mat-hint {
+  text-align: end;
+  font-size: 12px;
+  color: #666;
+}
+.btn-secondary {
+  width: 80px;
+  margin-right: 400px;
+}
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
