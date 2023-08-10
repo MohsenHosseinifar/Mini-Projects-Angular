@@ -1,0 +1,13 @@
+.continer-Choose-design {
+  background-color: #424242;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+mat-form-field {
+  margin-right: 124px;
+}
+.mat-icon {
+  margin-right: 7rem;
+}

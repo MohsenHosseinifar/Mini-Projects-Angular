@@ -1,4 +1,9 @@
-.app-login{
-    display: flex;
-    align-items: center;
+
+
+.container {
+  font-family: "yekan-bakh";
+}
+.app-login {
+  display: flex;
+  align-items: center;
 }

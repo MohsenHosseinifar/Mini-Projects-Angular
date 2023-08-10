@@ -11,26 +11,22 @@ export class LoginComponent implements OnInit {
   message: any;
   model: any;
   isTwoFactor: any;
-  username: string | undefined ;
-  password: string | undefined;
-  savedUsername: string | undefined;
-  savedPassword: string | undefined;
+  username: string;
+  password: string;
+  savedUsername: string;
+  savedPassword: string;
 
-  constructor(private router: Router,private userService: UserService ) {
-    
-  }
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.loadSavedCredentials();
   }
 
   login(): void {
-    
-    console.log("login start");
+    console.log('login start');
     console.log('نام کاربری:', this.username);
     console.log('رمز عبور:', this.password);
-    
-    console.log("login end");
+    console.log('login end');
 
     if (this.username === 'mohsen' && this.password === '123') {
       this.router.navigate(['/user-info']);
@@ -50,3 +46,4 @@ export class LoginComponent implements OnInit {
     this.savedPassword = localStorage.getItem('savedPassword') || '';
   }
 }
+ 

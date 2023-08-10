@@ -1,26 +1,25 @@
 <form (ngSubmit)="login()" #myForm="ngForm">
     <div class="login-right">
-
         <mat-form-field fxFlex="35">
             <mat-label>نام کاربری</mat-label>
-            <input placeholder="نام کاربری" matInput type="text" [(ngModel)]="username" name="username"
+            <input matInput type="text" placeholder="نام کاربری" name="username" [(ngModel)]="username"
                 [ngModelOptions]="{standalone: true}" autofocus>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-            <mat-label> رمز عبور </mat-label>
-            <mat-hint align="end">{{message.value.length}} / 8</mat-hint>
-            <input matInput #message maxlength="8" placeholder="رمز عبور" [(ngModel)]="password" name="password"
+            <mat-label>رمز عبور</mat-label>
+            <mat-hint align="end">{{ message.value.length }} / 8</mat-hint>
+            <input matInput #message maxlength="8" placeholder="رمز عبور" name="password" [(ngModel)]="password"
                 [ngModelOptions]="{standalone: true}">
         </mat-form-field>
+
         <div class="btns">
-            <button type="button" class="btn btn-secondary" (click)="login()">ورود </button>
-            <mat-slide-toggle (change)="saveCredentials()">ذخیره اطلاعات</mat-slide-toggle>
+            <button type="button" class="btn btn-secondary" (click)="login()">ورود</button>
+            <mat-slide-toggle class="matn" (change)="saveCredentials()">ذخیره اطلاعات</mat-slide-toggle>
         </div>
     </div>
 
     <div class="login-left">
-
+        <!-- این قسمت خالی است -->
     </div>
-
 </form>

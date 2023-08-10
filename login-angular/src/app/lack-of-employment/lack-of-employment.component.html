@@ -1,0 +1,32 @@
+<p>عدم اشتغال</p>
+
+<div class="continer-Choose-design">
+    <h2 style="font-family: vazir;">انتخاب‌ طرح </h2>
+    <mat-icon>search</mat-icon>
+</div>
+
+<div class="continer-Choose-design">
+    <mat-form-field>
+        <mat-label>نوع طرح</mat-label>
+        <mat-select [(ngModel)]="selectedDesignType" (selectionChange)="onDesignTypeChange()" required name="designTypeControl">
+            <mat-option *ngFor="let designType of Design_type" [value]="designType.value">
+                {{designType.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="showStartDate">
+        <mat-label>تاریخ شروع</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="showEndDate">
+        <mat-label>تاریخ پایان</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="showStatus">
+        <mat-label>وضعیت</mat-label>
+        <input matInput>
+    </mat-form-field>
+</div>
